@@ -9,17 +9,21 @@
 // acima de 91: EXCELENTE
 
 function studentSituation(studentNote) {
-  if (studentNote < 10) {
-    return 'PÉSSIMO';
-  } else if (studentNote >= 11 && studentNote <= 30) {
-    return 'RUIM';
-  } else if (studentNote >= 31 && studentNote <= 50) {
-    return 'REGULAR';
-  } else if (studentNote >= 51 && studentNote <= 70) {
-    return 'MEDIANO';
-  } else if (studentNote >= 71 && studentNote <= 90) {
-    return 'ÓTIMO';
-  } else {
-    return 'EXCELENTE';
+  const bool = true;
+  switch (bool) {
+    case (studentNote < 10):
+      return 'PÉSSIMO'  
+    case (studentNote <= 30):
+      return 'RUIM';
+    case (studentNote <= 50):
+      return 'REGULAR';
+    case (studentNote <= 70):
+      return 'MEDIANO';
+    case (studentNote <= 90):
+      return 'ÓTIMO';
+    default:
+      return 'EXCELENTE'
   }
 }
+
+console.log(studentSituation(1));
