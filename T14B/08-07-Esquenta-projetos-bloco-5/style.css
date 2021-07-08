@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+#main {
+  width: 100%;
+  height: 80%;
+}
+
+.imagemDinamica {
+  width: 30%;
+}
+
+#aside {
+  width: 25%;
+  display: inline-block;
+}
+#sectionInput1 {
+  width: 90%;
+}
+#asideInput {
+  width: 50%;
+}
+
+.sectionImg {
+  width: 70%;
+  display: inline-block;
+}
+#sectionInput2 {
+  width: 60%;
+}
+#imgInput {
+  width: 30%;
+}
