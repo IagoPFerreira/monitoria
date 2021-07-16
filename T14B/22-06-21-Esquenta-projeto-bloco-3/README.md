@@ -2,15 +2,23 @@
 
 O esquenta proposto para o bloco 3 é a criação de uma front-page de uma loja, com o intuito de que as pessoas estudantes consigam praticar os conhecimentos adquiridos ao longo do bloco 3.
 
-## Layout básico
+## Esquematização básica do layout
 
-O layout básico pode ser encontrado [Aqui](./layout-background-branco.png)
+A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout-background-branco.png)
 
-![Layout base esquenta bloco 3][logo]
+![Esquematização básica do layout esquenta bloco 3][esquematizacao]
 
-[logo]: ./layout-background-preto.png
+[esquematizacao]: ./imagens/layout-background-preto.png
 
 ---
+
+## Layout básico
+
+O layout básico pode ser encontrado [Aqui](./imagens/layout-basico.png)
+
+![Layout base esquenta bloco 3][layout]
+
+[layout]: ./imagens/layout-basico.png
 
 ## Observações técnicas
 
