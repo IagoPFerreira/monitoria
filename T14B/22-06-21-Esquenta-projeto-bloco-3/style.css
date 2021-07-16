@@ -6,28 +6,28 @@ body {
 }
 
 header {
-  background-color: rgb(110, 245, 245);
+  background-image: url('./imagens/bg-cinza.jpg');
   vertical-align: top;
   height: 100px;
   padding: 1%;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   display: inline-block;
 }
 
 h1 {
   display: inline-block;
-  margin-left: 30%;
+  margin-left: 22%;
   vertical-align: top;
 }
 
 .navegacao {
   display: inline-block;
   left: 10%;
-  margin: 2% 0 auto 20%;
+  margin: 3% 0 auto 15%;
   vertical-align: top;
 }
 
@@ -43,11 +43,15 @@ ul {
 }
 
 main {
-  background-color: rgb(221, 228, 156);
+  background-image: url('./imagens/bg-central.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 1%;
 }
 
 #container-categorias {
+  background-color: rgba(168, 168, 168, 0.397);
+  border-radius: 10px;
   display: inline-block;
   margin-left: 7%;
   padding: 40px;
@@ -66,16 +70,18 @@ h2 {
 #container-cartoes {
   display: inline-block;
   padding: 10px;
-  margin-left: 30%;
+  margin-left: 20%;
   width: fit-content;
 }
 
 .cartao-item {
+  background-color: rgba(168, 168, 168, 0.397);
   border: 1px solid black;
   border-radius: 10px;
   display: inline-block;
   padding: 20px;
   margin: 5px;
+  text-align: center;
 }
 
 .imagem-item {
@@ -84,20 +90,19 @@ h2 {
 }
 
 footer {
-  background-color: rgb(110, 245, 245);
+  background-image: url('./imagens/bg-cinza.jpg');
   padding: 5px;
 }
 
 .redes-sociais {
   display: inline-block;
-  margin-left: 35%;
-  margin-top: 4%;
+  margin-left: 30%;
   vertical-align: top;
 }
 
 #direitos-reservados {
   display: inline-block;
-  margin-left: 35%;
-  margin-top: 4%;
+  margin-left: 23%;
+  margin-top: 2.5%;
   vertical-align: top;
 }
