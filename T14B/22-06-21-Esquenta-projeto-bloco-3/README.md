@@ -20,6 +20,8 @@ O layout básico pode ser encontrado [Aqui](./imagens/layout-basico.png)
 
 [layout]: ./imagens/layout-basico.png
 
+---
+
 ## Observações técnicas
 
 - É esperado que essa página seja desenvolvida usando TAGs semânticas
