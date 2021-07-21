@@ -20,16 +20,6 @@ A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout
 
 ---
 
-## Layout básico
-
-O layout básico pode ser encontrado [Aqui](./imagens/layout-basico.png)
-
-![Layout base esquenta bloco 3][layout]
-
-[layout]: ./imagens/layout-basico.png
-
----
-
 ## Observações técnicas
 
 - É esperado que essa página seja desenvolvida usando TAGs semânticas
