@@ -126,28 +126,28 @@
 // console.log(objeto.string);
 // console.log(objeto2[objeto2.length - 2]);
 
-function tarara(param1, param2) {
-  console.log(param1);
-  const frase = `${param1} tem ${param2} anos`
+// function tarara(param1, param2) {
+//   console.log(param1);
+//   const frase = `${param1} tem ${param2} anos`
 
-  return frase
-}
+//   return frase
+// }
 
 // function () {}
 
 // () => {}
 
-const xablau = () => {
-  const argumento1 = 'Elmo';
-  const argumento2 = 100;
+// const xablau = () => {
+//   const argumento1 = 'Elmo';
+//   const argumento2 = 100;
 
-  const elmoFrase = tarara(argumento1, argumento2);
-  return elmoFrase;
-}
+//   const elmoFrase = tarara(argumento1, argumento2);
+//   return elmoFrase;
+// }
 
-console.log(xablau());
+// console.log(xablau());
 
-console.log(tarara('Hugo', 36));
+// console.log(tarara('Hugo', 36));
 
 // const tururu = () => ({
 //   quarto: {
@@ -175,3 +175,43 @@ console.log(tarara('Hugo', 36));
 // console.log(tururu());
 // console.log(tarara(654, 45));
 
+const array = [{a: '', d: ''}, {b: '', e: ''}, {c: '', f: ''}];
+
+for ( let i = 0; i < array.length; i += 1) {
+  array[i]
+}
+
+const maiusculas = array.map((miniArray) => {
+  // console.log(miniArray);
+  return Object.keys(miniArray).map((letra) => {
+    // console.log(letra);
+    return letra.toUpperCase()
+  })
+  // miniArray.map((letra) => {
+  //   console.log(letra);
+  //   letra.toUpperCase()
+  // })
+});
+
+contador = [];
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  contador += array[index];
+}
+
+console.log(contador);
+
+const teste = array.reduce((acc, curr, index, array) => {
+  acc += curr
+  return acc
+}, [])
+
+console.log(teste);
+
+array.map((curr, index, array) => {})
+
+// console.log(maiusculas);
+
+// const maiusculas2 = array.map((miniArray) => miniArray).map((letra) => letra);
+
+// console.log(maiusculas2);
