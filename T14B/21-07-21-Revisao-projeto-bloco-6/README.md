@@ -8,8 +8,6 @@ Antes de começar a desenvolver faça um fork desse repositório para o seu perf
 
 [Tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
----
-
 ## Esquematização básica do layout
 
 A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout-background-branco.png)
@@ -20,6 +18,16 @@ A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout
 
 ---
 
+<!-- ## Layout básico
+
+O layout básico pode ser encontrado [Aqui](./imagens/layout-basico.png)
+
+![Layout base esquenta bloco 3][layout]
+
+[layout]: ./imagens/layout-basico.png
+
+--- -->
+
 ## Observações técnicas
 
 - É esperado que essa página seja desenvolvida usando TAGs semânticas
@@ -29,7 +37,7 @@ A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout
 
 1. É esperado que haja 1 input do tipo texto, onde será possível inserir o nome e o sobrenome da pessoa usuária;
 
-- Crie uma label com o valor `Nome e sobrenome`;
+- Crie uma label com o valor `Nome e Sobrenome`;
 - Crie um input do tipo texto;
 
 2. É esperado que haja 1 input do tipo texto, onde será possível inserir o e-mail da pessoa usuária;
