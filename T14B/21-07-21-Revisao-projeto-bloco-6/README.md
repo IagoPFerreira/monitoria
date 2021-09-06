@@ -8,7 +8,6 @@ Antes de começar a desenvolver faça um fork desse repositório para o seu perf
 
 [Tutorial de como realizar um fork](https://guides.github.com/activities/forking/).
 
----
 ## Esquematização básica do layout
 
 A esquematização básica do layout pode ser encontrada [Aqui](./imagens/layout-background-branco.png)
