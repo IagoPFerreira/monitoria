@@ -5,15 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 80vh;
-  width: 98.8vw;
-  margin: auto;
-  padding: 0;
-}
-
-#root {
-  height: 100%;
-  width: 100%;
 }
 
 code {
