@@ -1,6 +1,7 @@
 import React from 'react';
 import fetcher from '../services/fetch';
 import CharacterCard from './CharacterCard';
+import Loading from './Loading';
 
 class CharactersList extends React.Component {
   constructor() {
@@ -37,7 +38,7 @@ class CharactersList extends React.Component {
     const { isLoading } = this.state;
     return (
       <section className="caracthers-list">
-        { isLoading ? <p>Loading</p> : this.renderHeroes() }
+        { isLoading ? <Loading />: this.renderHeroes() }
       </section>
     );
   }

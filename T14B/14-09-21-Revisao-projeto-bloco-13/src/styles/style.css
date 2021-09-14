@@ -1,23 +1,36 @@
+main {
+  height: 110%;
+  width: 100%;
+}
+
 .caracthers-list {
   align-items: center;
-  background-color: aqua;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   justify-content: space-around;
   width: 100%;
+}
+
+.characters-card {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  height: 50%;
+  justify-content: space-around;
+  text-decoration: none;
+  width: 15%;
 }
 
 .card {
   align-items: center;
   border: 1px solid black;
   border-radius: 10px;
+  color: black;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
   margin: 2.5% 0;
   padding: 5px 0;
-  width: 15%;
+  width: 100%;
 }
 
 .name {
@@ -27,5 +40,19 @@
 
 .thumbnail {
   border-radius: 5px;
+  width: 100%;
+}
+
+.form {
+  margin: 2% auto;
+  width: 40%;
+}
+
+.form button{
+  background-color: rgb(28, 194, 50);
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15pt;
+  padding: 8px;
   width: 100%;
 }
