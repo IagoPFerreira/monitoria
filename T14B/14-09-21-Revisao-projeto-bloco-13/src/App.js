@@ -1,9 +1,12 @@
+
 import './App.css';
-import CharactersList from './components/CharactersList';
+import Switcher from './components/Switcher';
 
 function App() {
   return (
-    <CharactersList />
+    <>
+      <Switcher />
+    </>
   );
 }
 

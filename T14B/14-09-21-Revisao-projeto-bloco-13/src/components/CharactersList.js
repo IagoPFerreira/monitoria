@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import fetcher from '../services/fetch';
 import CharacterCard from './CharacterCard';
 import Loading from './Loading';
@@ -29,7 +30,9 @@ class CharactersList extends React.Component {
   renderHeroes = () => {
     const { charactersList } = this.state;
     return charactersList.map((character) => (
-      <CharacterCard key={character.id} character={ character } />
+      <Link to={`/${character.id}`}>
+        <CharacterCard key={character.id} character={ character } />
+      </Link>
     ))
   };
 
