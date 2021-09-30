@@ -1,7 +1,7 @@
 const service = require('../services/userService');
 
 const getAllUsers = async (_req, res) => {
-  const data = service.getAllUsers();
+  const data = await service.getAllUsers();
 
   if (data.error) return res.state(data.error).json({ message: data.message })
 
