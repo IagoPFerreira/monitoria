@@ -1,14 +1,49 @@
-const fs = require('fs')
-const data2 = require('../../api/data/data2.json')
-console.log(data2);
+import React, { Component } from 'react';
+import { getAllUsers } from '../services/fetchAPI';
+import UserCard from './UserCard';
+import '../styles/style.css'
 
-data2.push('teste');
+class UserList extends Component {
+  constructor() {
+    super();
 
-const data = JSON.stringify(data2)
-console.log(Array.isArray(data2));
+    this.state = {
+      isLoading: true,
+      userList: [],
+    };
+  }
 
-try {
-  fs.writeFileSync('../../api/data/data2.json', data)
-} catch (err) {
-  console.error(err)
+  async componentDidMount() {
+    console.log('mount');
+    this.getUser()
+  }
+
+  getUser = async () => {
+    const users = await getAllUsers()
+    this.setState({
+      userList: users,
+      isLoading: false
+    })
+
+    // console.log(users);
+  }
+
+  renderUserList = () => {
+    const { userList } = this.state;
+    console.log('oi');
+    return userList.map((user) => (<UserCard user={ user } />))
+  }
+
+  render() {
+    const { isLoading } = this.state;
+    
+    console.log('render');
+    return (
+      <main className="user-list">
+        { isLoading ? <span>...Carregando</span> : this.renderUserList() }
+      </main>
+    );
+  }
 }
+
+export default UserList;
