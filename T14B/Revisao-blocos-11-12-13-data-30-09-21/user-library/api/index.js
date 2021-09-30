@@ -1,21 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const data = require('./data/data.json')
-const controller = require('./controllers/user');
+const controller = require('./controllers/userController');
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(cors())
 
-app.get('/', (_req, res) => {
-  res.status(200).json(data)
-})
+app.get('/', controller.getAllUsers)
 
 app.get('/search', controller.getUsersByState)
 
 app.get('/:id', controller.getUserById)
+
+app.post('/user/new', controller.insertNewUser)
 
 
 const PORT = process.env.PORT || 8080;
