@@ -16,6 +16,7 @@ app.get('/:id', controller.getUserById)
 
 app.post('/user/new', controller.insertNewUser)
 
+app.put('/image', controller.insertNewImage)
 
 const PORT = process.env.PORT || 8080;
 

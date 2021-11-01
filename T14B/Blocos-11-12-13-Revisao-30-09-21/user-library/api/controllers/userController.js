@@ -40,9 +40,20 @@ const insertNewUser = async (req, res) => {
   return res.status(200).json(newUser);
 }
 
+const insertNewImage = async (req, res) => {
+  const { body: { image, id } } = req;
+
+  const newImage = await service.insertNewImage(id, image)
+
+  if (newImage.error) return res.status(newImage.error).json({ message: newImage.message })
+
+  return res.status(200).json(newImage);
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
   getUsersByState,
-  insertNewUser
+  insertNewUser,
+  insertNewImage,
 };

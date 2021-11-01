@@ -43,19 +43,36 @@ const insertNewUser = (newUser) => {
   data.push(newUser);
   
   const newData = JSON.stringify(data)
-  console.log(Array.isArray(data));
   
   try {
-    console.log('opa');
     fs.writeFileSync('../../api/data/data.json', newData)
+    return true;
   } catch (err) {
     return err
   }
 }
+
+const insertNewImage = async (id, image) => {
+  const user = await getUserById(id)
+  const index = data.indexOf(user)
+  data[index].image = image;
+
+  const newData = JSON.stringify(data)
+
+  try {
+    fs.writeFileSync('../../api/data/data.json', newData)
+    return true;
+  } catch (err) {
+    return err
+  }
+
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
   getUsersByState,
   getUserByName,
   insertNewUser,
+  insertNewImage,
 }

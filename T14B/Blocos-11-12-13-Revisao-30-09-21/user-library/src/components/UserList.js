@@ -14,7 +14,7 @@ class UserList extends Component {
   }
 
   async componentDidMount() {
-    console.log('mount');
+    // console.log('mount');
     this.getUser()
   }
 
@@ -24,20 +24,18 @@ class UserList extends Component {
       userList: users,
       isLoading: false
     })
-
-    // console.log(users);
   }
 
   renderUserList = () => {
     const { userList } = this.state;
-    console.log('oi');
+    // console.log('oi');
     return userList.map((user) => (<UserCard user={ user } />))
   }
 
   render() {
     const { isLoading } = this.state;
     
-    console.log('render');
+    // console.log('render');
     return (
       <main className="user-list">
         { isLoading ? <span>...Carregando</span> : this.renderUserList() }

@@ -56,9 +56,26 @@ const insertNewUser = async (body) => {
   return allUsers;
 }
 
+const insertNewImage = async (id, image) => {
+  const user = await getUserById(id)
+  console.log('🚀 ~ file: userService.js ~ line 61 ~ insertNewImage ~ id', id)
+  console.log('🚀 ~ file: userService.js ~ line 61 ~ insertNewImage ~ user', user)
+
+  if (user.error) return user;
+
+  const newImage = await model.insertNewImage(id, image);
+  
+  if (newImage.err) return ({ error: 400, message: 'Error on image'});
+
+  const updatedImage = await getAllUsers();
+
+  return updatedImage;
+}
+
 module.exports = {
   getAllUsers,
   getUserById,
   getUsersByState,
-  insertNewUser
+  insertNewUser,
+  insertNewImage,
 };
