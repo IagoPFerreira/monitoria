@@ -1,59 +1,80 @@
 const service = require('../services/userService');
 
-const getAllUsers = async (_req, res) => {
+const getAllUsers = async (_req, res, next) => {
   const data = await service.getAllUsers();
 
-  if (data.error) return res.state(data.error).json({ message: data.message })
+  if (data.error) return next(data);
 
-  res.status(200).json(data)
-}
+  return res.status(200).json(data);
+};
 
-const getUserById = async (req, res) => {
+const getUserById = async (req, res, next) => {
   const { id } = req.params;
 
   const user = await service.getUserById(id);
 
-  if (user.error) return res.status(user.error).json({message: user.message})
+  if (user.error) return next(user);
 
   return res.status(200).json([user]);
-}
+};
 
-const getUsersByState = async (req, res) => {
+const getUsersByState = async (req, res, next) => {
   const { state } = req.query;
 
-  console.log(state);
+  const users = await service.getUsersByState(state);
 
-  const users = await service.getUsersByState(state)
-
-  if (users.error) return res.status(users.error).json({message: users.message})
+  if (users.error) return next(users);
 
   return res.status(200).json(users);
-}
+};
 
-const insertNewUser = async (req, res) => {
+const insertNewUser = async (req, res, next) => {
   const { body } = req;
 
-  const newUser = await service.insertNewUser(body)
+  const newUser = await service.insertNewUser(body);
 
-  if (newUser.error) return res.status(newUser.error).json({ message: newUser.message })
+  if (newUser.error) return next(newUser);
 
-  return res.status(200).json(newUser);
-}
+  return res.status(201).json(newUser);
+};
 
-const insertNewImage = async (req, res) => {
+const updateImage = async (req, res, next) => {
   const { body: { image, id } } = req;
 
-  const newImage = await service.insertNewImage(id, image)
+  const newImage = await service.updateImage(id, image);
 
-  if (newImage.error) return res.status(newImage.error).json({ message: newImage.message })
+  if (newImage.error) return next(newImage);
 
-  return res.status(200).json(newImage);
-}
+  return res.status(201).json(newImage);
+};
+
+const updateUser = async (req, res, next) => {
+  const { body } = req;
+  // console.log('🚀 ~ file: userController.js ~ line 53 ~ updateUser ~ body', body);
+
+  const users = await service.updateUser(body);
+
+  if (users.error) return next(users);
+
+  return res.status(201).json(users);
+};
+
+const deleteUser = async (req, res, next) => {
+  const { id } = req.params;
+
+  const user = await service.deleteUser(id);
+
+  if (user.error) return next(user);
+
+  return res.status(200).json(user);
+};
 
 module.exports = {
   getAllUsers,
   getUserById,
   getUsersByState,
   insertNewUser,
-  insertNewImage,
+  updateImage,
+  updateUser,
+  deleteUser,
 };

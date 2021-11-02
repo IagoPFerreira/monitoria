@@ -1,10 +1,12 @@
+/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable react/jsx-filename-extension */
+
 import React from 'react';
 import './App.css';
-import Routes from './routes/Routes';
 
 function App() {
   return (
-    <Routes/>
+    <>App</>
   );
 }
 

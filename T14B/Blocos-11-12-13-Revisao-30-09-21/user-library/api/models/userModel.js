@@ -1,28 +1,39 @@
-const fs = require('fs')
-const data = require('../data/data.json');
+const fs = require('fs');
 const crypto = require('crypto');
+const data = require('../data/data.json');
 
 const generateId = () => {
-  const hexstring = crypto.randomBytes(16).toString('hex')
+  const hexstring = crypto.randomBytes(16).toString('hex');
 
-  const id = `${hexstring.substring(0,8)}-${hexstring.substring(8,12)}-${hexstring.substring(12,16)}-${hexstring.substring(16,20)}-${hexstring.substring(20)}`
+  const id = `${hexstring.substring(0, 8)}-${hexstring.substring(8, 12)}-${hexstring.substring(12, 16)}-${hexstring.substring(16, 20)}-${hexstring.substring(20)}`;
 
-  return id;  
-}
+  return id;
+};
 
 const verifyId = (id) => {
   const checkId = data.find((user) => user.id === id);
 
   if (checkId) generateId();
-  
+
   return id;
-}
+};
 
 const handleId = () => {
-  const generatedId = generateId()
-  const verifiedId = verifyId(generatedId)
+  const generatedId = generateId();
+  const verifiedId = verifyId(generatedId);
   return verifiedId;
-}
+};
+
+const fileWriter = () => {
+  const newData = JSON.stringify(data);
+
+  try {
+    fs.writeFileSync('../../api/data/data.json', newData);
+    return true;
+  } catch (err) {
+    return err;
+  }
+};
 
 const getAllUsers = () => data;
 
@@ -32,41 +43,44 @@ const getUsersByState = (state) => data.filter((user) => user.state === state);
 
 const getUserByName = (name) => data.filter((user) => {
   const fullname = user.first_name + user.last_name;
-  return name === fullname
-})
+  return name === fullname;
+});
 
-const insertNewUser = (newUser) => {
+const insertNewUser = (user) => {
   const id = handleId();
+
+  const newUser = user;
 
   newUser.id = id;
 
   data.push(newUser);
-  
-  const newData = JSON.stringify(data)
-  
-  try {
-    fs.writeFileSync('../../api/data/data.json', newData)
-    return true;
-  } catch (err) {
-    return err
-  }
-}
 
-const insertNewImage = async (id, image) => {
-  const user = await getUserById(id)
-  const index = data.indexOf(user)
+  return fileWriter();
+};
+
+const updateImage = async (id, image) => {
+  const user = await getUserById(id);
+  const index = data.indexOf(user);
   data[index].image = image;
 
-  const newData = JSON.stringify(data)
+  return fileWriter();
+};
 
-  try {
-    fs.writeFileSync('../../api/data/data.json', newData)
-    return true;
-  } catch (err) {
-    return err
-  }
+const updateUser = async (body) => {
+  const user = await getUserById(body.id);
+  const index = data.indexOf(user);
+  data[index] = body;
 
-}
+  return fileWriter();
+};
+
+const deleteUser = async (id) => {
+  const user = await getUserById(id);
+  const index = data.indexOf(user);
+  data.splice(index, 1);
+
+  return fileWriter();
+};
 
 module.exports = {
   getAllUsers,
@@ -74,5 +88,7 @@ module.exports = {
   getUsersByState,
   getUserByName,
   insertNewUser,
-  insertNewImage,
-}
+  updateImage,
+  updateUser,
+  deleteUser,
+};
