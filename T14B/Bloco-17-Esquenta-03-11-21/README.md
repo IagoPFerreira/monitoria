@@ -3,9 +3,9 @@
 Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do
 Manual da Pessoa Estudante da Trybe.
 
-# Revisão blocos 11, 12 e 13
+# Esquenta bloco 17
 
-Neste repositório está criado a base de um projeto de revisão dos conteúdos dos blocos 11, 12 e 13 do curso de desenvolvimento da Trybe, esses blocos tratam sobre React e aqui está uma forma de praticar os conhecimentos aprendidos nesses blocos.
+Neste repositório está criado a base de um projeto de esquenta do bloco 17 do curso de desenvolvimento da Trybe, esse bloco trata sobre Hooks e Context-API e aqui está uma forma de praticar os conhecimentos aprendidos nesse bloco.
 
 Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu projeto a partir desse repositório, utilizando um fork para colocar seus códigos.
 
@@ -31,49 +31,32 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
   Nesse projeto, você será capaz de:
 
-- Saber a melhor forma para instalar um gerenciador de pacotes
-- Inicializar um projeto em **React**
-- Utilizar JSX no **React**
-- Utilizar o **ReactDOM.render** para renderizar elementos numa página web
-- Utilizar o `import` para usar código externo junto ao seu
-- Criar componentes **React** corretamente
-- Fazer uso de `props` corretamente
-- Fazer composição de componentes corretamente
-- Criar múltiplos componentes dinamicamente
-- Utilizar **PropTypes** para checar o tipo de uma prop no uso de um componente
-- Utilizar **PropTypes** para garantir a presença de props obrigatórias no uso de um componente
-- Utilizar **PropTypes** para checar que uma prop é um objeto de formato específico
-- Utilizar **PropTypes** para garantir que uma prop é um array com elementos de um determinado tipo
-- Ler o estado de um componente e usá-lo para alterar o que exibimos no browser
-- Inicializar um componente, dando a ele um estado pré-definido
-- Atualizar o estado de um componente
-- Capturar eventos utilizando a sintaxe do React
-- Criar formulários utilizando sintaxe JSX com as tags : `input`, `textarea`, `select`, `form`
-- Transmitir informações de componentes filhos para componentes pais via callbacks
-- Utilizar o componentDidMount para executar uma ação após o componente ser inserido no DOM;
-- Utilizar o shouldComponentUpdate para avaliar se uma atualização do componente deve ou não acontecer naquele momento;
-- Utilizar o componentDidUpdate para executar uma ação após o componente ser atualizado;
-- Utilizar o componentWillUnmount para realizar uma ação antes de o componente ser desmontado;
-- Utilizar o props.children para acessar os filhos de um componente React e interagir com eles;
-- Utilizar o componente BrowserRouter corretamente;
-- Criar links de navegação na aplicação com o componente Link ;
-- Criar rotas, mapeando o caminho da URL com o componente correspondente, via Route ;
-- Estruturar e organizar as rotas da sua aplicação com o componente Switch ;
-- Usar o componente Redirect pra alternar entre rotas.
+- Saber a melhor forma para instalar um gerenciador de pacotes;
+- Inicializar um projeto em **React**;
+- Utilizar JSX no **React**;
+- Utilizar o **ReactDOM.render** para renderizar elementos numa página web;
+- Utilizar o `import` para usar código externo junto ao seu;
+- Criar componentes **React** corretamente;
+- Fazer uso de `props` corretamente;
+- Fazer composição de componentes corretamente;
+- Criar múltiplos componentes dinamicamente;
+- Utilizar **PropTypes** para checar o tipo de uma prop no uso de um componente;
+- Utilizar **PropTypes** para garantir a presença de props obrigatórias no uso de um componente;
+- Utilizar **PropTypes** para checar que uma prop é um objeto de formato específico;
+- Utilizar **PropTypes** para garantir que uma prop é um array com elementos de um determinado tipo;
+- Utilizar a Context API do React para gerenciar estado;
+- Utilizar o React Hook useState;
+- Utilizar o React Hook useContext;
+- Utilizar o React Hook useEffect;
+- Criar React Hooks customizados.
 
 ---
 
 # O que deverá ser desenvolvido
 
-Você deverá desenvolver uma aplicação que consiste em uma biblioteca de cartões de usuários de uma rede social utilizando React. A biblioteca é composta por:
+Você deverá desenvolver uma aplicação que consiste em um quadro de metodologias ágeis, utilizando React.
 
-- Um cabeçalho;
-
-- Uma lista de cartões, onde cada cartão representa um usário e possui uma imagem, nome completo, cidade e estado de cada usuário ;
-
-- Um formulário para adicionar um novo usuário na biblioteca.
-
-Você precisará implementar componentes que em conjunto resultarão na biblioteca de usuários dinâmica.
+Você precisará implementar componentes que em conjunto resultarão no quadro de metodologias ágeis, dinâmico.
 
 ## Desenvolvimento
 
@@ -88,7 +71,7 @@ controlada por estados.
 
 2. Clone o repositório
 
-- `git clone git@github.com:SeuUsuatio/Revisao-blocos-11-12-13.git`.
+- `git clone git@github.com:"SeuUsuatio"/sd-014-"SuaTribo"-monitoria.git`.
 - Entre na pasta desse projeto no repositório que você acabou de clonar:
   - `cd user-library`
 
